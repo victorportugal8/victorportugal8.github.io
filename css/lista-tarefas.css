@@ -8,10 +8,10 @@ html{
     font-size: 62.5%;
 }
 body{
-    background-color: #CCC;
     font-family: 'Roboto', sans-serif;
     display: flex;
     letter-spacing: .2rem;
+    background-color: #CCC;
 }
 body, html{
     height: 100%;
