@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Victor Portugal">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gerador de Senhas</title>
+</head>
+<body>
+    <div class="senha-container">
+        <div class="senha-header">
+            <div class="senha">
+                <span id="senha">Senha Aqui</span>
+                <button id="copia">Copiar</button>
+            </div>
+        </div>
+
+        <div class="senha-body">
+            <div class="form-controle">
+                <label for="length">Tamanho da Senha</label>
+                <input type="number" id="tam" value="10" min="8" max="30">
+            </div>
+
+            <div class="form-controle">
+                <label for="maiuscula">Contém Letras Maiúsculas</label>
+                <input type="checkbox" id="maiuscula">
+            </div>
+
+            <div class="form-controle">
+                <label for="minuscula">Contém Letras Minúsculas</label>
+                <input type="checkbox" id="minuscula">
+            </div>
+
+            <div class="form-controle">
+                <label for="number">Contém Números</label>
+                <input type="checkbox" id="numero">
+            </div>
+
+            <div class="form-controle">
+                <label for="symbol">Contém Símbolos</label>
+                <input type="checkbox" id="simbolo">
+            </div>
+            <button class="gerador" id="gerador">Gerar Senha</button>
+        </div>
+    </div>
+
+    <script src="js/geradorSenha.js" async></script>
+</body>
+</html>
