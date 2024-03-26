@@ -35,3 +35,6 @@ Desenvolvedor Web Front-End, pós-graduando em Engenharia de Software e Bacharel
     * Fórmulas básicas e avançadas;
     * Utilização de ferramentas dinâmicas(Tabelas e Gráficos);
     * Criação de macros;
+
+## Idiomas
+* Inglês: Intermediário - Minds English School;
