@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Victor Portugal">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gerador QR Code</title>
+</head>
+<body>
+    <section class="cabecalho">
+        <div class="titulo">QR Codes</div>
+        <div class="subtitulo">Gerador de QR Code para tudo!</div>
+    </section>
+    <section class="input-usuario">
+        <label for="input_text">Digite alguma coisa</label>
+        <input type="text" name="input_text" id="input-texto" autocomplete="off">
+        <button class="btn" type="submit">Gerar QR Code</button>
+    </section>
+    <div class="qr-code" style="display: none;"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="js/qrCode.js"></script>
+</body>
+</html>
