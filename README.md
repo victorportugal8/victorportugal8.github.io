@@ -4,10 +4,11 @@
 Desenvolvedor Web Front-End, pós-graduando em Engenharia de Software e Bacharel em Ciências da Computação. Com conhecimentos em HTML, CSS, JavaScript.
 
 ## Formação
-- Pós-graduando em Engenharia de Software pela Universidade Estácio de Sá;
-- Bacharel em Ciências da Computação pela Universidade Estácio de Sá;
+* Pós-graduando em Engenharia de Software pela Universidade Estácio de Sá;
+* Bacharel em Ciências da Computação pela Universidade Estácio de Sá;
 
 ## Meus Projetos
+* <a href="https://victorportugal8.github.io/lista-tarefas/" target="_blank">Lista de Tarefas</a>
 
 ## Cursos Complementares
 * Desenvolvimento Web: React e Redux - Udemy(cursando)
