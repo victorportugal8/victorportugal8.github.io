@@ -9,6 +9,7 @@ Desenvolvedor Web Front-End, pós-graduando em Engenharia de Software e Bacharel
 
 ## Meus Projetos
 * <a href="https://github.com/victorportugal8/victorportugal8.github.io/tree/main/lista-tarefas" target="_blank">Lista de Tarefas</a>
+
 ## Cursos Complementares
 * Desenvolvimento Web: React e Redux - Udemy(cursando)
     * Criação de Componentes em React;
