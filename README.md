@@ -10,6 +10,7 @@ Desenvolvedor Web Front-End, pós-graduando em Engenharia de Software e Bacharel
 ## Meus Projetos
 * <a href="https://victorportugal8.github.io/lista-tarefas/" target="_blank">Lista de Tarefas</a>
 * <a href="https://victorportugal8.github.io/gerador-qr-code/" target="_blank">Gerador de QR Codes</a>
+* <a href="https://victorportugal8.github.io/gerador-senhas/" target="_blank">Gerador de Senhas</a>
 
 ## Cursos Complementares
 * Desenvolvimento Web: React e Redux - Udemy(cursando)
