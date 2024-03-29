@@ -11,8 +11,8 @@
 * <a href="https://victorportugal8.github.io/lista-tarefas/" target="_blank">Lista de Tarefas</a>
 * <a href="https://victorportugal8.github.io/gerador-qr-code/" target="_blank">Gerador de QR Codes</a>
 * <a href="https://victorportugal8.github.io/gerador-senhas/" target="_blank">Gerador de Senhas</a>
-* <a href="https://victorportugal8.github.io/portfolio/calculadoraJS/" target="_blank">Calculadora</a>
-* <a href="https://victorportugal8.github.io/portfolio/cronometro/" target="_blank">Cronômetro</a>
+* <a href="https://victorportugal8.github.io/calculadoraJS/" target="_blank">Calculadora</a>
+* <a href="https://victorportugal8.github.io/cronometro/" target="_blank">Cronômetro</a>
 
 ## Cursos Complementares
 * <a href="https://www.udemy.com/course/react-redux-pt/" target="_blank">Desenvolvimento Web: React e Redux - Udemy(cursando)</a>
