@@ -1,7 +1,7 @@
 # Victor Portugal
 
 ## Sobre mim
-Desenvolvedor Web Front-End, pós-graduando em Engenharia de Software e Bacharel em Ciências da Computação. Com conhecimentos em HTML, CSS, JavaScript.
+<strong>Desenvolvedor Web Front-End</strong>, pós-graduando em <strong>Engenharia de Software</strong> e Bacharel em Ciências da Computação. Com conhecimentos em <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>.
 
 ## Formação
 * Pós-graduando em Engenharia de Software pela Universidade Estácio de Sá;
