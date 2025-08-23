@@ -1,11 +1,11 @@
 # Victor Portugal
 
 ## Sobre mim
-<strong>Desenvolvedor Web Front-End</strong>, pós-graduando em <strong>Engenharia de Software</strong> e Bacharel em Ciências da Computação. Com conhecimentos em <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>.
+<strong>Desenvolvedor Web Front-End</strong>, pós-graduado em <strong>Engenharia de Software</strong> e Bacharel em Ciências da Computação. Com conhecimentos em <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>.
 
 ## Formação
-* Pós-graduando em Engenharia de Software pela Universidade Estácio de Sá;
-* Bacharel em Ciências da Computação pela Universidade Estácio de Sá;
+* Pós-graduado em <strong>Engenharia de Software</strong> pela Universidade Estácio de Sá;
+* Bacharel em <strong>Ciências da Computação</strong> pela Universidade Estácio de Sá;
 
 ## Meus Projetos
 * <a href="https://victorportugal8.github.io/lista-tarefas/" target="_blank">Lista de Tarefas</a>
@@ -38,3 +38,4 @@
 
 ## Idiomas
 * Inglês: Intermediário - Minds English School;
+
