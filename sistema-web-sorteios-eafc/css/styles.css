@@ -1,0 +1,110 @@
+/* CSS Tema Escuro (Dark Mode) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Fundo principal escuro */
+    color: #e0e0e0; /* Cor de texto principal (cinza claro) */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    background-color: #1e1e1e; /* Fundo do "card" */
+    border: 1px solid #333; /* Borda sutil */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    padding: 25px;
+    width: 100%;
+    max-width: 700px;
+}
+h1 {
+    text-align: center;
+    color: #ffffff; /* Título principal branco */
+    border-bottom: 2px solid #007bff; /* Linha azul (destaque) */
+    padding-bottom: 10px;
+}
+p {
+    color: #b0b0b0; /* Texto de instrução (cinza mais suave) */
+}
+textarea {
+    width: 95%;
+    height: 150px;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #2a2a2a; /* Fundo da área de texto */
+    color: #e0e0e0; /* Cor do texto digitado */
+    border: 1px solid #444;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ffffff; /* Texto do botão branco */
+    background-color: #007bff; /* Azul (era verde) */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+}
+
+/* Estilos do Calendário Gerado */
+#calendarioGerado {
+    margin-top: 25px;
+}
+.rodada {
+    margin-bottom: 20px;
+    background-color: #2a2a2a; /* Fundo de cada rodada */
+    border: 1px solid #333;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.rodada h3 {
+    background-color: #007bff; /* Destaque da rodada (azul) */
+    color: white;
+    padding: 10px 15px;
+    margin: 0;
+    font-size: 1.2em;
+}
+.jogo {
+    display: grid; /* MUDANÇA: de 'flex' para 'grid' */
+    /* Define 3 colunas: 
+        1fr (espaço flexível para Time 1), 
+        auto (espaço fixo para o 'vs'), 
+        1fr (espaço flexível para Time 2) 
+    */
+    grid-template-columns: 1fr auto 1fr; 
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #333; /* Separador de jogos */
+}
+.jogo:last-child {
+    border-bottom: none;
+}
+.jogo .time {
+    font-weight: bold;
+    color: #e0e0e0; /* Cor dos times */
+}
+
+/* NOVO: Alinha o time da casa à direita (para perto do "vs") */
+.jogo .time:first-of-type {
+    text-align: right;
+}
+
+/* NOVO: Alinha o time de fora à esquerda (para perto do "vs") */
+.jogo .time:last-of-type {
+    text-align: left;
+}
+
+.jogo .vs {
+    color: #E63946; /* Vermelho para o "vs" */
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 0 15px; /* MUDANÇA: Adiciona um espaçamento fixo */
+}

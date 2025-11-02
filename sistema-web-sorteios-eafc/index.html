@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Gerador de Calendário</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Gerador de Calendário</h1>
+        <p>Insira os times participantes (um por linha):</p>
+        <textarea id="listaTimes" placeholder="Time A&#10;Time B&#10;Time C&#10;Time D"></textarea>
+        
+        <button onclick="gerarCalendarioCompleto()">Gerar Jogos (Ida e Volta)</button>
+
+        <div id="calendarioGerado"></div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
