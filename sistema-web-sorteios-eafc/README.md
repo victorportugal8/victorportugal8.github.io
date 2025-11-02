@@ -1,11 +1,3 @@
-Perfeito! Essa refatoração (separar HTML, CSS e JS) é uma excelente prática profissional.
-
-Você está certo, o README.md precisa refletir isso. Aqui está a versão atualizada, especificamente nas seções "Tecnologias Utilizadas" e "Como Usar".
-
-README.md (Atualizado)
-
-Markdown
-
 # Gerador de Sorteios e Calendários 🏆
 
 Este é um projeto web simples, de página única, criado para ajudar na organização de campeonatos e sorteios. A aplicação roda 100% no navegador, não exigindo *back-end* ou instalação.
