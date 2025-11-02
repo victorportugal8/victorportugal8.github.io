@@ -3,19 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Gerador de Calendário</title>
+    <title>Gerenciador de Campeonatos</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <div class="container">
-        <h1>Gerador de Calendário</h1>
-        <p>Insira os times participantes (um por linha):</p>
-        <textarea id="listaTimes" placeholder="Time A&#10;Time B&#10;Time C&#10;Time D"></textarea>
-        
-        <button onclick="gerarCalendarioCompleto()">Gerar Jogos (Ida e Volta)</button>
+        <h1>Gerenciador</h1>
+        <nav class="tabs-nav">
+            <button class="tab-button active" onclick="mostrarSecao('secaoCalendario', this)">
+                Gerar Calendário
+            </button>
+            <button class="tab-button" onclick="mostrarSecao('secaoSorteio', this)">
+                Sorteio Simples
+            </button>
+        </nav>
 
-        <div id="calendarioGerado"></div>
+        <div id="secaoCalendario" class="tab-content">
+            <p>Insira os times participantes (um por linha):</p>
+            <textarea id="listaTimes" placeholder="Time A&#10;Time B&#10;Time C&#10;Time D"></textarea>
+            <button onclick="gerarCalendarioCompleto()">Gerar Jogos (Ida e Volta)</button>
+            <div id="calendarioGerado" class="resultado-container"></div>
+        </div>
+
+        <div id="secaoSorteio" class="tab-content" style="display:none;">
+            <p>Insira os nomes ou itens para sortear (um por linha):</p>
+            <textarea id="listaSorteio" placeholder="Nome 1&#10;Nome 2&#10;Nome 3&#10;..."></textarea>
+            <button onclick="sortearLista()">Sortear Ordem</button>
+            <div id="resultadoSorteio" class="resultado-container"></div>
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>

@@ -1,71 +1,26 @@
-/**
- * Função 1: O Algoritmo Round-Robin para gerar os jogos.
-*/
-function algoritmoRoundRobin(nomesTimes) {
-    let times = [...nomesTimes];
-    let calendario = []; // Array para todos os jogos
-            
-    // Se o número de times for ímpar, adiciona um "BYE" (Folga)
-    if (times.length % 2 !== 0) {
-        times.push("FOLGA");
-    }
-
-    const numTimes = times.length;
-    const numRodadas = numTimes - 1;
-    const metadeTimes = numTimes / 2;
+// --- NOVO: Função para trocar de Abas ---
+function mostrarSecao(idSecao, elementoBotao) {
+    // 1. Esconde todas as abas
+    document.querySelectorAll('.tab-content').forEach(secao => {
+        secao.style.display = 'none';
+    });
     
-    // Cria arrays para os times da "casa" e "visitantes"
-    let casa = times.slice(0, metadeTimes);
-    let fora = times.slice(metadeTimes).reverse();
+    // 2. Remove a classe 'active' de todos os botões
+    document.querySelectorAll('.tab-button').forEach(botao => {
+        botao.classList.remove('active');
+    });
     
-    // --- GERAÇÃO DO TURNO 1 (IDA) ---
-    for (let i = 0; i < numRodadas; i++) {
-        let rodada = [];
-        for (let j = 0; j < casa.length; j++) {
-            // Adiciona o jogo se não for contra a "FOLGA"
-            if (casa[j] !== "FOLGA" && fora[j] !== "FOLGA") {
-                rodada.push({
-                    rodadaNum: i + 1,
-                    timeCasa: casa[j],
-                    timeFora: fora[j]
-                });
-            }
-        }
-        calendario.push(...rodada);
-
-        // Rotaciona os times para a próxima rodada
-        // O time [0] (primeiro da lista 'casa') fica fixo
-        // 1. Tira o último time de 'fora' e o primeiro (não-fixo) de 'casa'
-        let ultimoFora = fora.pop();
-        let primeiroCasa = casa.splice(1, 1)[0]; 
-
-        // 2. Adiciona eles nas listas opostas
-        casa.splice(1, 0, ultimoFora); // ultimoFora vira o segundo da lista 'casa'
-        fora.unshift(primeiroCasa); // primeiroCasa vira o primeiro da lista 'fora'
-    }
+    // 3. Mostra a aba clicada
+    document.getElementById(idSecao).style.display = 'block';
     
-    // --- GERAÇÃO DO TURNO 2 (VOLTA) ---
-    const jogosTurno1 = [...calendario];
-    const offsetRodadas = numRodadas; // O número de rodadas do 1º turno
-
-    for (const jogo of jogosTurno1) {
-        calendario.push({
-            rodadaNum: jogo.rodadaNum + offsetRodadas,
-            timeCasa: jogo.timeFora, // Inverte o mando
-            timeFora: jogo.timeCasa  // Inverte o mando
-        });
-    }
-
-    return calendario; // Retorna um array com TODOS os objetos de jogo
+    // 4. Adiciona a classe 'active' no botão clicado
+    elementoBotao.classList.add('active');
 }
 
-/**
- * Função 2: Função principal chamada pelo botão.
- */
+// --- LÓGICA DA ABA 1: GERADOR DE CALENDÁRIO ---
+
 function gerarCalendarioCompleto() {
     const inputText = document.getElementById('listaTimes').value;
-    
-    // Limpa os dados
     let nomes = inputText.split('\n')
                             .map(name => name.trim()) 
                             .filter(name => name.length > 0); 
@@ -74,24 +29,53 @@ function gerarCalendarioCompleto() {
         alert("Por favor, insira pelo menos 2 times.");
         return;
     }
-
-    // Chama o algoritmo
     const jogos = algoritmoRoundRobin(nomes);
-    
-    // Exibe os resultados
     exibirCalendario(jogos);
 }
 
-/**
- * Função 3: Renderiza o calendário no HTML.
- */
+function algoritmoRoundRobin(nomesTimes) {
+    let times = [...nomesTimes];
+    let calendario = [];
+    if (times.length % 2 !== 0) {
+        times.push("FOLGA");
+    }
+    const numTimes = times.length;
+    const numRodadas = numTimes - 1;
+    const metadeTimes = numTimes / 2;
+    let casa = times.slice(0, metadeTimes);
+    let fora = times.slice(metadeTimes).reverse();
+
+    for (let i = 0; i < numRodadas; i++) {
+        let rodada = [];
+        for (let j = 0; j < casa.length; j++) {
+            if (casa[j] !== "FOLGA" && fora[j] !== "FOLGA") {
+                rodada.push({ rodadaNum: i + 1, timeCasa: casa[j], timeFora: fora[j] });
+            }
+        }
+        calendario.push(...rodada);
+        let ultimoFora = fora.pop();
+        let primeiroCasa = casa.splice(1, 1)[0]; 
+        casa.splice(1, 0, ultimoFora);
+        fora.unshift(primeiroCasa);
+    }
+    
+    const jogosTurno1 = [...calendario];
+    const offsetRodadas = numRodadas;
+    for (const jogo of jogosTurno1) {
+        calendario.push({
+            rodadaNum: jogo.rodadaNum + offsetRodadas,
+            timeCasa: jogo.timeFora,
+            timeFora: jogo.timeCasa
+        });
+    }
+    return calendario;
+}
+
 function exibirCalendario(jogos) {
     const outputDiv = document.getElementById('calendarioGerado');
-    outputDiv.innerHTML = ''; // Limpa resultados anteriores
-    
+    outputDiv.innerHTML = '';
     if (jogos.length === 0) return;
 
-    // Agrupa os jogos por rodada
     const jogosPorRodada = new Map();
     for (const jogo of jogos) {
         if (!jogosPorRodada.has(jogo.rodadaNum)) {
@@ -101,15 +85,9 @@ function exibirCalendario(jogos) {
     }
     
     let htmlFinal = '';
-    
-    // Ordena as rodadas (Map pode não ser ordenado)
     const rodadasOrdenadas = [...jogosPorRodada.keys()].sort((a, b) => a - b);
-
-    // Monta o HTML
     for (const numRodada of rodadasOrdenadas) {
-        htmlFinal += `<div class="rodada">`;
-        htmlFinal += `<h3>Rodada ${numRodada}</h3>`;
-        
+        htmlFinal += `<div class="rodada"><h3>Rodada ${numRodada}</h3>`;
         const jogosDaRodada = jogosPorRodada.get(numRodada);
         for (const jogo of jogosDaRodada) {
             htmlFinal += `
@@ -122,6 +100,61 @@ function exibirCalendario(jogos) {
         }
         htmlFinal += `</div>`;
     }
+    outputDiv.innerHTML = htmlFinal;
+}
 
+// --- NOVO: LÓGICA DA ABA 2: SORTEIO SIMPLES ---
+
+/**
+ * Função principal do Sorteio (chamada pelo novo botão)
+ */
+function sortearLista() {
+    const inputText = document.getElementById('listaSorteio').value;
+    
+    // 1. Limpa os dados
+    let nomes = inputText.split('\n')
+                            .map(name => name.trim()) 
+                            .filter(name => name.length > 0);
+    
+    if (nomes.length === 0) {
+        alert("Por favor, insira pelo menos um item para sortear.");
+        return;
+    }
+
+    // 2. Chama o algoritmo de embaralhamento
+    let nomesEmbaralhados = shuffleArray(nomes);
+
+    // 3. Exibe o resultado
+    exibirSorteio(nomesEmbaralhados);
+}
+
+/**
+ * O "Ordenamento Randômico" (Algoritmo Fisher-Yates Shuffle)
+ */
+function shuffleArray(array) {
+    // Percorre o array de trás para frente
+    for (let i = array.length - 1; i > 0; i--) {
+        // Sorteia um índice aleatório (j) entre 0 e i (incluindo i)
+        const j = Math.floor(Math.random() * (i + 1));
+        
+        // Troca o elemento atual (i) pelo elemento sorteado (j)
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+/**
+ * Renderiza a lista ordenada no HTML
+ */
+function exibirSorteio(listaOrdenada) {
+    const outputDiv = document.getElementById('resultadoSorteio');
+    
+    // Monta uma lista ordenada (<ol>)
+    let htmlFinal = '<h2>Resultado do Sorteio</h2><ol>';
+    for (const nome of listaOrdenada) {
+        htmlFinal += `<li>${nome}</li>`;
+    }
+    htmlFinal += '</ol>';
+    
     outputDiv.innerHTML = htmlFinal;
 }
