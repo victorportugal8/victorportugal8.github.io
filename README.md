@@ -39,5 +39,5 @@
     * Criação de macros;
 
 ## Idiomas
-* Inglês: Intermediário - Minds English School;
+* Inglês: Intermediário;
 
