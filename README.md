@@ -4,10 +4,12 @@
 <strong>Desenvolvedor Web Front-End</strong>, pós-graduado em <strong>Engenharia de Software</strong> e Bacharel em Ciências da Computação. Com conhecimentos em <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>.
 
 ## Formação
+* Pós-graduando em <strong>Análise de Dados e Inteligência Artificial</strong> pelo Centro Universitário UniUnica;
 * Pós-graduado em <strong>Engenharia de Software</strong> pela Universidade Estácio de Sá;
 * Bacharel em <strong>Ciências da Computação</strong> pela Universidade Estácio de Sá;
 
 ## Meus Projetos
+* <a href="https://victorportugal8.github.io/sistema-web-sorteios-eafc/" target="_blank">Sistema de Sorteios para Campeonatos</a>
 * <a href="https://victorportugal8.github.io/lista-tarefas/" target="_blank">Lista de Tarefas</a>
 * <a href="https://victorportugal8.github.io/gerador-qr-code/" target="_blank">Gerador de QR Codes</a>
 * <a href="https://victorportugal8.github.io/gerador-senhas/" target="_blank">Gerador de Senhas</a>
