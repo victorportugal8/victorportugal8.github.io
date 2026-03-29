@@ -10,6 +10,7 @@
 
 ## Meus Projetos
 * <a href="https://victorportugal8.github.io/sistema-web-sorteios-eafc/" target="_blank">Sistema de Sorteios para Campeonatos</a>
+* <a href="https://victorportugal8.github.io/netlura/" target="_blank">Clone Netflix</a>
 * <a href="https://victorportugal8.github.io/lista-tarefas/" target="_blank">Lista de Tarefas</a>
 * <a href="https://victorportugal8.github.io/gerador-qr-code/" target="_blank">Gerador de QR Codes</a>
 * <a href="https://victorportugal8.github.io/gerador-senhas/" target="_blank">Gerador de Senhas</a>
